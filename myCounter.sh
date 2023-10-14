@@ -27,15 +27,15 @@ do
 	
 if [ $COUNTER -lt -60 ]    # within a min is bulls eye 
 then
-    echo -e "${RED} $Percentage MORE predicted time for tasknote $TASKNOTE:$1 Actual ::$Actual .. took $COUNTER secs MORE on `date` ${NC}" 
-    echo $Percentage percent MORE Predicted time for  $TASKNOTE :$1  Actual :: $Actual ..  took $COUNTER seconds MORE  on `date` > tmp.log  #
+    echo -e "${RED} $Percentage MORE predicted time for tasknote $TASKNOTE:$1 elapsed :: $Actual .. took $COUNTER secs MORE on `date` ${NC}" 
+    echo $Percentage percent MORE Predicted time for  $TASKNOTE :$1  elapsed :: $Actual ..  took $COUNTER seconds MORE  on `date` > tmp.log  #
 elif [ $COUNTER -gt 60 ]
 then
-    echo -e "${GREEN} $Percentage MORE predicted time for tasknote $TASKNOTE:$1 Actual ::$Actual .. took $COUNTER secs MORE on `date` ${NC}" 
-    echo $Percentage percent LESS Predicting time for $TASKNOTE : $1  Actual :: $Actual ...  took $COUNTER seconds LESS on `date` > tmp.log  # 
+    echo -e "${GREEN} $Percentage MORE predicted time for tasknote $TASKNOTE:$1 elapsed :: $Actual .. took $COUNTER secs MORE on `date` ${NC}" 
+    echo $Percentage percent LESS Predicting time for $TASKNOTE : $1  elapsed :: $Actual ...  took $COUNTER seconds LESS on `date` > tmp.log  # 
 else
-    echo -e "${PURPLE} $Percentage percent BULLSEYE, Prediction of $2 to require $1 Good Job Sunil on ::  `date` ${NC}" 
-    echo $Percentage percent BULLSEYE, Prediction of   $2  to require  $1 Good Job Sunil on  :: `date` > tmp.log  # 
+    echo -e "${PURPLE} $Percentage percent BULLSEYE, Prediction of $2 to require $1 Good Job dhruva on ::  `date` ${NC}" 
+    echo $Percentage percent BULLSEYE, Prediction of   $2  to require  $1 Good Job dhruva on  :: `date` > tmp.log  # 
 fi
 
 sleep 1
@@ -45,6 +45,8 @@ sleep 1
     if [[ $input = "q" ]] || [[ $input = "Q" ]]; then
 # The following line is for the prompt to appear on a new line.
         echo
+	echo " time taken: $Actual minutes "
+	echo
         break 
     fi
 done
