@@ -1,6 +1,6 @@
 #Made by: ChefYeshpal@github
 #purpose: to help me in inserting my mcq numbers in computerised form
-
+#start date: 20 October 2023
 
 ########################################################################################################################################################
 
@@ -12,7 +12,7 @@ date=$(date +'%Y-%m-%d') #current date
 week=$(date +'%V') #week number
 
 
-#define logfile
+#define logfile, can change this if u wanna
 logfile='number.log'
 
 
@@ -22,10 +22,11 @@ read -p "Physics marks: " phyM
 read -p "Chemistry marks: " chemM 
 read -p "English marks: " engM
 read -p "LR/DI marks: " ldM
+echo "------------------------------" >> "$logfile"
+read -p "Questions per subj: " qpj
 
 
 
-echo "------------------------------"
 echo "------------------------------" >> "$logfile" #should be able to view stuff in log file
 
 
